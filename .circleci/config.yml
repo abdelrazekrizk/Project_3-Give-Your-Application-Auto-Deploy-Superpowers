@@ -45,6 +45,8 @@ defaults-deploy-frontend: &defaults-deploy-frontend
       - image: circleci/node:13.8.0
     working_directory: ~/project
     parallelism: 1
+#First, install Prettier locally:
+#https://prettier.io/docs/en/install.html
 #(npm install --save-dev --save-exact prettier)
 #Then, create an empty config file to let editors and other tools know you are using Prettier:
 #(echo {}> .prettierrc.json)
@@ -52,7 +54,7 @@ defaults-deploy-frontend: &defaults-deploy-frontend
 #format all files with Prettier:
 #(npx prettier --write .)
 #This avoids merge conflicts and other collaboration issues!
-#(npx prettier --check .)     
+#(npx prettier --check .)
 
 version: 2.1
 orbs:                                                   
@@ -521,7 +523,8 @@ jobs:                                                    ########## 1. Build Pha
           name: add database values to env files to EC2
           command: |
                     echo ENVIROMENT=production >> "backend/.env"
-                    echo "${API_URL}" >> backend/.env
+                    echo NODE_ENV=production >> "backend/.env"
+                    echo VERSION=1 >> "backend/.env"
                     echo BACKEND_PORT=3030 >> "backend/.env"
                     echo TYPEORM_CONNECTION=postgres >> "backend/.env"
                     echo TYPEORM_MIGRATIONS_DIR=./src/migrations >> "backend/.env"
@@ -667,8 +670,8 @@ jobs:                                                    ########## 1. Build Pha
                     aws cloudformation deploy \
                     --template-file .circleci/files/cloudfront.yml \
                     --stack-name udapeople-cloudfront \
-                    --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}" \
-                    --tags project=udapeople-Update-cloudfront 
+                    --parameter-overrides WorkflowID="${CIRCLE_WORKFLOW_ID:0:7}" \
+                    --tags project=udapeople-Update-cloudfront
       - run:
           name: Get New workflow id
           command: |

@@ -5,11 +5,11 @@ Description: >
     deploy Cloudfront APP using CloudFormation
 
 Parameters:
-  WorkflowID:                     
-    Description: Unique identifier.  
+  WorkflowID:
+    Description: Unique identifier.
     Type: String
 
-Resources:  
+Resources:
   CloudFrontOriginAccessIdentity:
     Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
     Properties:
