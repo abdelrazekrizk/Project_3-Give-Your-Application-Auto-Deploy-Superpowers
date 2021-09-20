@@ -678,7 +678,7 @@ jobs:                                                    ########## 1. Build Pha
                     New_Workflow_ID=$(aws cloudformation list-exports \
                     --query "Exports[?Name=='WorkflowID'].Value" \
                     --no-paginate \
-                    --output text > ./.circleci/CloudFormation/New_Workflow_ID.txt
+                    --output text > ./.circleci/CloudFormation/New_Workflow_ID.txt)
 
                     declare -x New_Workflow_ID
                     echo "${New_Workflow_ID}" | cat
