@@ -22,5 +22,4 @@ ExecStop=/usr/lib/node_modules/pm2/bin/pm2 kill
 [Install]
 WantedBy=multi-user.target
 
-
 cat /etc/systemd/system/pm2-ubuntu.service
