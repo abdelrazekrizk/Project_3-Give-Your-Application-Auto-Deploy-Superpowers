@@ -678,7 +678,7 @@ jobs:                                                    ########## 1. Build Pha
                     New_Workflow_ID=$(aws cloudformation list-exports \
                     --query "Exports[?Name=='WorkflowID'].Value" \
                     --no-paginate \
-                    --output text > ./.circleci/CloudFormation/Old_Workflow_ID.txt)
+                    --output text > ./.circleci/CloudFormation/New_Workflow_ID.txt
 
                     declare -x New_Workflow_ID
                     echo "${New_Workflow_ID}" | cat
@@ -703,16 +703,16 @@ jobs:                                                    ########## 1. Build Pha
       - run:
           name: Remove old stacks and files 
           command: |                                                      # WorkflowID_remove=${CIRCLE_WORKFLOW_ID:0:7}
-                    echo "${Old_Workflow_ID}
-                    echo "${New_Workflow_ID}
-                    echo "${old_stack}
+                    echo "${Old_Workflow_ID}"
+                    echo "${New_Workflow_ID}"
+                    echo "${old_stack}"
                     
                     if [[ "${old_stack[@]}" =~ "${Old_Workflow_ID}" ]]
                     then
-                    aws s3 rm s3://udapeople-frontend-${Old_Workflow_ID} --recursive
-                    aws s3 rb s3://udapeople-frontend-${Old_Workflow_ID} --force
-                    aws cloudformation delete-stack --stack-name udapeople-frontend-${Old_Workflow_ID}
-                    aws cloudformation delete-stack --stack-name udapeople-backend-${Old_Workflow_ID}
+                      aws s3 rm s3://udapeople-frontend-${Old_Workflow_ID} --recursive
+                      aws s3 rb s3://udapeople-frontend-${Old_Workflow_ID} --force
+                      aws cloudformation delete-stack --stack-name udapeople-frontend-${Old_Workflow_ID}
+                      aws cloudformation delete-stack --stack-name udapeople-backend-${Old_Workflow_ID}
                     fi      
 
 # Here's where you will add some code to rollback on failure                  
