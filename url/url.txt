@@ -1,31 +1,30 @@
 
 
-Public Url to GitHub repository (not private) [URL01]
+1-Public Url to GitHub repository (not private) [URL01]
+https://github.com/abdelrazekrizk/Project_3-Give-Your-Application-Auto-Deploy-Superpowers
 
-
-Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]
-
+2-Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]
 http://udapeople-frontend-52a1b5b.s3-website-us-east-1.amazonaws.com/#/employees
 
-Public URL for your CloudFront distribution (aka, your blue production front-end) [URL03]
-
+3-Public URL for your CloudFront distribution (aka, your blue production front-end) [URL03]
 http://d1yurymh8qdu9d.cloudfront.net/#/employees
 
-Public URLs to deployed application back-end in EC2 [URL04]
-
+4-Public URLs to deployed application back-end in EC2 [URL04]
 http://34.202.180.92:3030/
 
-Public URL to your Prometheus Server [URL05]
-
+5-Public URL to your Prometheus Server [URL05]
 http://3.229.86.142:9090/classic/targets
 
-Public URL to your grafana dashboards
+6-Public URL to your grafana dashboards
 user admin
 password admin
 http://52.0.142.130:3000/d/SnzZcGN7z/node-exporter-full?orgId=1&refresh=1m&from=1632055549271&to=1632141949271
 
-Public URL to your grafana Server
+7-Public URL to your grafana Server
 http://52.0.142.130:3000
 
-Public URL to your Prometheus-Node-Exporter
+8-Public URL to your Prometheus-Node-Exporter
 http://54.167.203.171:9100/metrics
+
+8-Public URL to your Prometheus-Alertmanager
+http://52.55.210.24:9093/#/alerts
