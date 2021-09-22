@@ -22,12 +22,20 @@
   args:
      warn: false
 
-- name: "install typescript"
+- name: "install typescript #https://www.npmjs.com/package/typescript"
   become: yes
   shell: |           
           cd ~           
-          npm install typescript -g
+          npm install -g typescript
+  ignore_errors: true
+
+- name: "install node-sass #https://www.npmjs.com/package/node-sass"
+  become: yes
+  shell: |           
+          cd ~           
+          npm install node-sass
   ignore_errors: true 
+
 
 - name: "install pm2"
   become: yes

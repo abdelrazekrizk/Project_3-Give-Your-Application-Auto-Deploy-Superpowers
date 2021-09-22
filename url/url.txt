@@ -1,5 +1,4 @@
 
-
 1-Public Url to GitHub repository (not private) [URL01]
 https://github.com/abdelrazekrizk/Project_3-Give-Your-Application-Auto-Deploy-Superpowers
 
@@ -13,18 +12,17 @@ http://d1yurymh8qdu9d.cloudfront.net/#/employees
 http://34.202.180.92:3030/
 
 5-Public URL to your Prometheus Server [URL05]
-http://3.229.86.142:9090/classic/targets
+http://3.229.86.142:9090/alerts
+http://3.229.86.142:9090/targets
+
 
 6-Public URL to your grafana dashboards
 user admin
 password admin
-http://52.0.142.130:3000/d/SnzZcGN7z/node-exporter-full?orgId=1&refresh=1m&from=1632055549271&to=1632141949271
+http://52.0.142.130:3000/d/SnzZcGN7z/node-exporter-full?orgId=1&refresh=1m&from=1632231312744&to=1632317712744
 
 7-Public URL to your grafana Server
-http://52.0.142.130:3000
-
-8-Public URL to your Prometheus-Node-Exporter
-http://54.167.203.171:9100/metrics
+http://52.0.142.130:3000/
 
 8-Public URL to your Prometheus-Alertmanager
-http://52.55.210.24:9093/#/alerts
+http://3.209.232.150:9093/#/alerts
