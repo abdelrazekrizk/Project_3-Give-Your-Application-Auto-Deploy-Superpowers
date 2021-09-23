@@ -11,18 +11,21 @@ http://d1yurymh8qdu9d.cloudfront.net/#/employees
 4-Public URLs to deployed application back-end in EC2 [URL04]
 http://34.202.180.92:3030/
 
-5-Public URL to your Prometheus Server [URL05]
+5-Public URL to your Prometheus Node_Exporter
+http://34.202.180.92:9100/metrics
+
+6-Public URL to your Prometheus Server [URL05]
 http://3.229.86.142:9090/alerts
 http://3.229.86.142:9090/targets
 
 
-6-Public URL to your grafana dashboards
+7-Public URL to your grafana dashboards
 user admin
 password admin
 http://52.0.142.130:3000/d/SnzZcGN7z/node-exporter-full?orgId=1&refresh=1m&from=1632231312744&to=1632317712744
 
-7-Public URL to your grafana Server
+8-Public URL to your grafana Server
 http://52.0.142.130:3000/
 
-8-Public URL to your Prometheus-Alertmanager
+9-Public URL to your Prometheus-Alertmanager
 http://3.209.232.150:9093/#/alerts
