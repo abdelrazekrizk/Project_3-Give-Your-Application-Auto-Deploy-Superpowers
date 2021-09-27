@@ -686,8 +686,8 @@ jobs:                                                    ########## 1. Build Pha
                     pwd
                     ls -la             
 # Here's where you will add some code to rollback on failure                  
-#      - revert-migrations
-#      - destroy-environment                
+      - revert-migrations
+      - destroy-environment                
   cleanup:
     <<: *defaults-deploy                                              # Docker image amazon/aws-cli that supports AWS CLI for deploy infrastructure
     steps:
@@ -716,8 +716,8 @@ jobs:                                                    ########## 1. Build Pha
                     fi      
 
 # Here's where you will add some code to rollback on failure                  
-#     - revert-migrations
-#     - destroy-environment                 
+      - revert-migrations
+      - destroy-environment                
 # Below would be the Workflows specific config
 
 workflows:
